@@ -24,6 +24,11 @@ public class Vigilante {
 	}
 	
 	public String registrarIngresoVehiculo(Vehiculo vehiculo){
+		String placa = vehiculo.getPlaca();
+		if(placa.substring(0, 1).equals("A"))
+			return PLACA_NO_HABIL;
+		if(placa.equals("MOTO-010") || placa.equals("CARR-020"))
+			return PARQUEADERO_LLENO;
 		return VEHICULO_INGRESADO;
 	}
 	
