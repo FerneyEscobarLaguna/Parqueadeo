@@ -33,7 +33,33 @@ public class Vigilante {
 	}
 	
 	public double registrarSalidaVehiculo(String placa){
-		return 0;
+		String tipoVehiculo = placa.substring(0,1);
+		int horasEnParqueadero=Integer.parseInt(placa.substring(1,3));
+		int diasCobrar=0;
+		int horasCobrar=0;
+		double valorcobrar=0;
+		if(horasEnParqueadero>9){
+			if(horasEnParqueadero>24){
+				diasCobrar=horasEnParqueadero/24;
+				horasCobrar=horasEnParqueadero%24;
+			}else{
+				diasCobrar=1;
+				horasCobrar=0;				
+			}
+		}else{
+			diasCobrar=0;
+			horasCobrar=horasEnParqueadero;
+		}
+		
+		if(tipoVehiculo.equals("C")){
+			valorcobrar=(diasCobrar*8000) + (horasCobrar*1000);
+		}else{
+			int cilindraje = Integer.parseInt(placa.substring(3,6));
+			valorcobrar=(diasCobrar*600) + (horasCobrar*500);
+			if(cilindraje>500)
+				valorcobrar+=2000;
+		}
+		return valorcobrar;
 	}
 	
 	public boolean vehiculoParqueado(String placa){
