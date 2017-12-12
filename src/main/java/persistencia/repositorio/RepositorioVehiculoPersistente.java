@@ -1,7 +1,7 @@
 package persistencia.repositorio;
 
 import co.ceiba.domain.Vehiculo;
-import co.ceiba.servie.RepositorioVehiculo;
+import co.ceiba.service.RepositorioVehiculo;
 
 public class RepositorioVehiculoPersistente implements RepositorioVehiculo {
 

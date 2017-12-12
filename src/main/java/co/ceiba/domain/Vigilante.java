@@ -1,7 +1,9 @@
 package co.ceiba.domain;
 
-import co.ceiba.servie.RepositorioRegistroParqueadero;
-import co.ceiba.servie.RepositorioVehiculo;
+import java.sql.ResultSet;
+
+import co.ceiba.service.RepositorioRegistroParqueadero;
+import co.ceiba.service.RepositorioVehiculo;
 import persistencia.repositorio.RepositorioRegistroParqueaderoPersisnte;
 import persistencia.repositorio.RepositorioVehiculoPersistente;
 
@@ -64,5 +66,9 @@ public class Vigilante {
 	
 	public boolean vehiculoParqueado(String placa){
 		return true;
+	}
+	
+	public ResultSet consultarVehiculos(){
+		return repositorioParqueadero.obtenerVehiculosParqueados();
 	}
 }

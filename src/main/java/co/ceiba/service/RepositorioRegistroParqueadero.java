@@ -1,4 +1,6 @@
-package co.ceiba.servie;
+package co.ceiba.service;
+
+import java.sql.ResultSet;
 
 import co.ceiba.domain.RegistroParqueadero;
 import co.ceiba.domain.Vehiculo;
@@ -21,4 +23,10 @@ public interface RepositorioRegistroParqueadero {
 	 * @param registroParqueadero
 	 */
 	void registraSalida(RegistroParqueadero registroParqueadero);
+	
+	/**
+	 * Permite consultar los vehiculos e nel parqueadero
+	 * @param registroParqueadero
+	 */
+	ResultSet obtenerVehiculosParqueados();
 }

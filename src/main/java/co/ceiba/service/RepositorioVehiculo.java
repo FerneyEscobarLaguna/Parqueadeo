@@ -1,4 +1,4 @@
-package co.ceiba.servie;
+package co.ceiba.service;
 
 import co.ceiba.domain.Vehiculo;
 
