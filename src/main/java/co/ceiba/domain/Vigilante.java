@@ -1,9 +1,8 @@
 package co.ceiba.domain;
 
-import java.sql.ResultSet;
-
 import co.ceiba.service.RepositorioRegistroParqueadero;
 import co.ceiba.service.RepositorioVehiculo;
+import co.ceiba.service.Tool;
 import persistencia.repositorio.RepositorioRegistroParqueaderoPersisnte;
 import persistencia.repositorio.RepositorioVehiculoPersistente;
 
@@ -68,7 +67,8 @@ public class Vigilante {
 		return true;
 	}
 	
-	public ResultSet consultarVehiculos(){
-		return repositorioParqueadero.obtenerVehiculosParqueados();
+	public String consultarVehiculos() throws Exception{
+		Tool tool = new Tool();
+		return tool.convertToJSON(repositorioParqueadero.obtenerVehiculosParqueados());
 	}
 }

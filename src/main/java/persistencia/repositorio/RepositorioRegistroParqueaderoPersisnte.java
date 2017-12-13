@@ -23,7 +23,6 @@ public class RepositorioRegistroParqueaderoPersisnte implements RepositorioRegis
 		Conection con= new Conection();
 		String query = "SELECT PLACA,TIPO_VEHICULO,FECHA_INGRESO FROM REGISTRO_PARQUEADERO";
 		ResultSet rs = con.executeQuery(query);
-		con.close();
 		return rs;
 	}
 }
