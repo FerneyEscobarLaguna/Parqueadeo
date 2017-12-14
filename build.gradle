@@ -34,6 +34,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web','org.apache.tomcat.embed:tomcat-embed-jasper'
 	,'javax.servlet:jstl')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile("org.json:json:20141113")
 }
 
 test {
