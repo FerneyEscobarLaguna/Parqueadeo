@@ -10,7 +10,7 @@ public interface RepositorioRegistroParqueadero {
 	 * Permite obtener vehiculo que se encuentre en el parqueadero
 	 * @param placa
 	 */
-	Vehiculo obtenerVehiculoParqueadoPlaca(String placa);
+	RegistroParqueadero obtenerVehiculoParqueadoPlaca(String placa);
 	
 	/**
 	 * Permite registrar el ingreso de un vehiculo al parqueadero
@@ -25,8 +25,14 @@ public interface RepositorioRegistroParqueadero {
 	void registraSalida(RegistroParqueadero registroParqueadero);
 	
 	/**
-	 * Permite consultar los vehiculos e nel parqueadero
+	 * Permite consultar los vehiculos en el parqueadero
 	 * @param registroParqueadero
 	 */
 	ResultSet obtenerVehiculosParqueados();
+	
+	/**
+	 * Permite consultar la cantidad de vehiculos en el parqueadero de un tipo espesifico
+	 * @param tipo_vehiculo
+	 */
+	int contarVehiculosTipo(String tipo);
 }

@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import co.ceiba.domain.Carro;
 import co.ceiba.domain.Moto;
-import co.ceiba.domain.Vigilante;
+import co.ceiba.domain.Vigilant;
 //import co.ceiba.servie.RepositorioRegistroParqueadero;
 //import co.ceiba.servie.RepositorioVehiculo;
 import co.ceiba.testDataBuilder.CarroTestDataBuilder;
@@ -26,11 +26,11 @@ public class VigilanteTest {
 		//RepositorioVehiculo repositorioVehiculo = mock(RepositorioVehiculo.class);		
 		
 		//Vigilante vigilante = new Vigilante(repositorioParqueadero,repositorioVehiculo);
-		Vigilante vigilante = new Vigilante();
+		Vigilant vigilante = new Vigilant();
 		// act 
 		String mensaje = vigilante.registrarIngresoVehiculo(carro);
 		//assert
-		assertEquals(mensaje,Vigilante.VEHICULO_INGRESADO);
+		assertEquals(mensaje,Vigilant.VEHICULO_INGRESADO);
 	}
 	
 	@Test
@@ -44,11 +44,11 @@ public class VigilanteTest {
 		//RepositorioVehiculo repositorioVehiculo = mock(RepositorioVehiculo.class);		
 		
 		//Vigilante vigilante = new Vigilante(repositorioParqueadero,repositorioVehiculo);
-		Vigilante vigilante = new Vigilante();
+		Vigilant vigilante = new Vigilant();
 		// act 
 		String mensaje = vigilante.registrarIngresoVehiculo(moto);
 		//assert
-		assertEquals(mensaje,Vigilante.VEHICULO_INGRESADO);
+		assertEquals(mensaje,Vigilant.VEHICULO_INGRESADO);
 	}
 	
 	@Test
@@ -63,7 +63,7 @@ public class VigilanteTest {
 		//RepositorioVehiculo repositorioVehiculo = mock(RepositorioVehiculo.class);		
 		
 		//Vigilante vigilante = new Vigilante(repositorioParqueadero,repositorioVehiculo);
-		Vigilante vigilante = new Vigilante();
+		Vigilant vigilante = new Vigilant();
 		// act 
 		boolean estaParqueado = vigilante.vehiculoParqueado(carro.getPlaca());
 		//assert

@@ -30,6 +30,15 @@ public class Conection {
 		return null;
 	}
 	
+	public void executeUpdate(String update){
+		try{
+			PreparedStatement pst = con.prepareStatement(update);
+			pst.executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
+	
 	public void close(){
 		try {
 			con.close();

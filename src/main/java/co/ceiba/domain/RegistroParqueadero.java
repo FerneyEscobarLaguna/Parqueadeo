@@ -7,6 +7,7 @@ public class RegistroParqueadero {
 	private Date fechaIngreso;
 	private Date fechaSalida;
 	private double costoParqueadero;
+	private int registro_vehiculo_id;
 	
 	public RegistroParqueadero(Vehiculo vehiculo){
 		this.vehiculo = vehiculo;
@@ -18,6 +19,14 @@ public class RegistroParqueadero {
 		this.fechaIngreso = fechaIngreso;
 		this.fechaSalida = fechaSalida;
 		this.costoParqueadero = costoParqueadero;
+	}
+	
+	public RegistroParqueadero(int registro_vehiculo_id,Vehiculo vehiculo, Date fechaIngreso, Date fechaSalida, double costoParqueadero) {
+		this.vehiculo = vehiculo;
+		this.fechaIngreso = fechaIngreso;
+		this.fechaSalida = fechaSalida;
+		this.costoParqueadero = costoParqueadero;
+		this.registro_vehiculo_id = registro_vehiculo_id;
 	}
 	
 	public Vehiculo getVehiculo() {
@@ -43,5 +52,14 @@ public class RegistroParqueadero {
 	}
 	public void setCostoParqueadero(double costoParqueadero) {
 		this.costoParqueadero = costoParqueadero;
+	}
+
+	public int getRegistro_vehiculo_id() {
+		return registro_vehiculo_id;
+	}
+
+	public void setRegistro_vehiculo_id(int registro_vehiculo_id) {
+		this.registro_vehiculo_id = registro_vehiculo_id;
 	}	
+	
 }
